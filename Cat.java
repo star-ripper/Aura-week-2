@@ -17,6 +17,7 @@ public class Cat extends Pet{
         System.out.println("ID: " + getId());
         System.out.println("Breed: " + breed);
         System.out.println("FurColor: " + furColor);
+        System.out.print("  Price: " + petType.getPrice());
         System.out.println("IsVaccinated: ");
         if(isVaccinated)
             System.out.println("Yes");
