@@ -4,6 +4,9 @@ import java.util.List;
 
 public class PetCatalog {
     List<Pet> pets ;
+    PetCatalog(){
+        pets = new ArrayList<>();
+    }
     PetCatalog(Pet p){
         pets = new ArrayList<>();
         pets.add(p);
@@ -11,23 +14,28 @@ public class PetCatalog {
     void addPet(Pet p){
         pets.add(p);
     }
-    void removePet(Pet p){
-        pets.remove(p);
+    void removePet(int id){
+        pets.remove(pets.get(id));
     }
-    void searchID(int id){
+    void search(int id){
         for(Pet p : pets){
             if(p.getId() == id){
-                System.out.println(p.getName());
+                p.displayInfo();
                 return;
             }
         }
         System.out.println("Unable to find pet with id " + id);
     }
-    void searchName(String name){
+    void search(String name){
         for(Pet p : pets){
             if(p.getName().equalsIgnoreCase(name)){
-                System.out.println(p.getName());
+                p.displayInfo();
             }
+        }
+    }
+    void displayAll(){
+        for(Pet p : pets){
+                p.displayInfo();
         }
     }
 
