@@ -10,7 +10,7 @@ abstract class Pet {
     public Pet(String name, int age) {
         this.name = name;
         this.age = age;
-        id = count++;
+        id = ++count;
     }
     String getName() {return name;}
     int getAge() {return age;}
