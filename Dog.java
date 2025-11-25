@@ -13,6 +13,7 @@ public class Dog extends Pet{
         System.out.println("Age: " + getAge());
         System.out.println("ID: " + getId());
         System.out.println("Breed: " + breed);
+        System.out.print("  Price: " + petType.getPrice());
         System.out.println("IsVaccinated: ");
         if(isVaccinated)
             System.out.println("Yes");
