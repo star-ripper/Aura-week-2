@@ -13,6 +13,7 @@ public class Bird extends Pet{
         System.out.println("Age: " + getAge());
         System.out.println("Price: " + getPrice());
         System.out.println("Species: " + species);
+        System.out.print("  Price: " + petType.getPrice());
         System.out.println("Can Fly: ");
         if(canFly)
             System.out.println("Yes");
